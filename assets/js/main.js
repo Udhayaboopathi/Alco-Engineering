@@ -14,7 +14,6 @@
   };
 
   // footer
-  // your-script.js
   fetch("../Footer/footer.html")
     .then((response) => response.text())
     .then((data) => {

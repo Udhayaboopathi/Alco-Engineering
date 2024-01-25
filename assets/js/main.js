@@ -13,18 +13,7 @@
     }
   };
 
-  // footer
-  document.addEventListener("DOMContentLoaded", function () {
-    // Load footer content
-    var footerPlaceholder = document.getElementById("footer-placeholder");
-    var footerContentUrl = "../../footer.html";
-
-    fetch(footerContentUrl)
-      .then((response) => response.text())
-      .then((html) => {
-        footerPlaceholder.innerHTML = html;
-      });
-  });
+  // foo
 
   /**
    * Easy event listener function

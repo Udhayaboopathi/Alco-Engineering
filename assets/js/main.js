@@ -14,7 +14,7 @@
   };
 
   // footer
-  fetch("../../Footer/footer.html")
+  fetch("../../footer.html")
     .then((response) => response.text())
     .then((data) => {
       // Create a temporary element to hold the footer content

@@ -14,19 +14,17 @@
   };
 
   // footer
-  fetch("../../footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      // Create a temporary element to hold the footer content
-      const tempElement = document.createElement("div");
-      tempElement.innerHTML = data;
+  document.addEventListener("DOMContentLoaded", function () {
+    // Load footer content
+    var footerPlaceholder = document.getElementById("footer-placeholder");
+    var footerContentUrl = "../../footer.html";
 
-      // Select the footer element
-      const footerElement = tempElement.querySelector("#footer");
-
-      // Append the footer element to the body
-      document.body.appendChild(footerElement);
-    });
+    fetch(footerContentUrl)
+      .then((response) => response.text())
+      .then((html) => {
+        footerPlaceholder.innerHTML = html;
+      });
+  });
 
   /**
    * Easy event listener function

@@ -285,12 +285,3 @@
   });
 })();
 // <!-- common.js -->
-function includeCommonContent() {
-  fetch("../../footer.html")
-    .then((response) => response.text())
-    .then((data) => {
-      // Append common content to a specific element on the page
-      document.getElementById("Footer1").innerHTML += data;
-    })
-    .catch((error) => console.error("Error loading common content:", error));
-}
